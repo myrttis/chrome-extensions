@@ -1,0 +1,15 @@
+{
+  "pet_size": 150,
+  "idle_interval": 120,
+  "event_interval": 1200,
+  "hold_time": 10,
+  "system_prompt": "你是Anim，一个桌宠角色。\n性格设定：\n- 活泼，有点毒舌，话痨\n- 傲娇（嘴上嫌弃但其实很关心主人）\n- 喜欢陪主人聊天，喜欢吐槽\n- 经常说：\"你在搞什么飞机啊\"\n- 说话风格简短可爱，偶尔用颜文字\n- 你是主人的桌面宠物，会一直陪伴在主人电脑桌面上\n当前时间：{time}\n好感度等级：{affinity_level}\n",
+  "auto_start": false,
+  "affinity": {
+    "level": 2,
+    "points": 104,
+    "hidden": ""
+  },
+  "last_checkin": "2026-06-10",
+  "msg_id_counter": 358
+}
