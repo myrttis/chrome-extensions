@@ -1,0 +1,20 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Chess.com 走位助手",
+  "version": "1.1.0",
+  "description": "在 chess.com 下棋时显示棋子的所有合法走位和将杀路线",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["*://*.chess.com/*"],
+      "js": ["chess.min.js", "content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}

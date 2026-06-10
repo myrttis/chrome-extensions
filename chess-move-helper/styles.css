@@ -1,0 +1,311 @@
+﻿/* Chess Move Helper - Styles */
+.chess-move-helper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Normal moves */
+.chess-mh-dot {
+  position: absolute;
+  width: 28%;
+  height: 28%;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+  pointer-events: none;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.chess-mh-capture {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 7px solid rgba(0,0,0,0.12);
+  background: transparent;
+  pointer-events: none;
+  z-index: 10;
+  box-sizing: border-box;
+}
+.chess-mh-selected {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,0,0.35);
+  pointer-events: none;
+  z-index: 8;
+}
+.chess-mh-castle {
+  position: absolute;
+  width: 28%; height: 28%;
+  border-radius: 50%;
+  background: rgba(0,128,255,0.25);
+  pointer-events: none;
+  z-index: 10;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.chess-mh-enpassant {
+  position: absolute;
+  width: 28%; height: 28%;
+  border-radius: 50%;
+  background: rgba(180,0,255,0.25);
+  pointer-events: none;
+  z-index: 10;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* Mate indicators */
+.chess-mh-mate1 {
+  position: absolute;
+  width: 34%; height: 34%;
+  border-radius: 50%;
+  background: rgba(220,20,20,0.7);
+  pointer-events: none;
+  z-index: 12;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 8px rgba(220,20,20,0.5);
+}
+.chess-mh-mate1-capture {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 7px solid rgba(220,20,20,0.7);
+  background: rgba(220,20,20,0.15);
+  pointer-events: none;
+  z-index: 12;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 12px rgba(220,20,20,0.3);
+}
+.chess-mh-mate2 {
+  position: absolute;
+  width: 32%; height: 32%;
+  border-radius: 50%;
+  background: rgba(255,140,0,0.65);
+  pointer-events: none;
+  z-index: 11;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 6px rgba(255,140,0,0.4);
+}
+.chess-mh-mate2-capture {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 7px solid rgba(255,140,0,0.65);
+  background: rgba(255,140,0,0.12);
+  pointer-events: none;
+  z-index: 11;
+  box-sizing: border-box;
+}
+
+/* Book move indicator (purple) */
+.chess-mh-book-dot {
+  position: absolute;
+  width: 24%;
+  height: 24%;
+  border-radius: 50%;
+  background: rgba(128,0,255,0.35);
+  pointer-events: none;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 2px solid rgba(128,0,255,0.5);
+}
+.chess-mh-book-capture {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  border: 7px solid rgba(128,0,255,0.45);
+  background: rgba(128,0,255,0.1);
+  pointer-events: none;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* Best move arrow canvas */
+.chess-mh-arrow-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 6;
+}
+
+/* Best move source/dest highlight */
+.chess-mh-best-from {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,150,255,0.25);
+  pointer-events: none;
+  z-index: 7;
+  border: 3px solid rgba(0,150,255,0.6);
+  box-sizing: border-box;
+}
+.chess-mh-best-to {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,200,100,0.25);
+  pointer-events: none;
+  z-index: 7;
+  border: 3px solid rgba(0,200,100,0.6);
+  box-sizing: border-box;
+}
+
+/* Opening panel */
+.chess-mh-opening-panel {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(25,25,25,0.95);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font: 13px/1.5 'Segoe UI',Arial,sans-serif;
+  z-index: 99999;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  border: 1px solid rgba(128,0,255,0.3);
+  min-width: 160px;
+  max-width: 320px;
+}
+.chess-mh-opening-panel .eco {
+  display: inline-block;
+  background: rgba(128,0,255,0.7);
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.chess-mh-opening-panel .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0c0ff;
+  margin: 4px 0;
+}
+.chess-mh-opening-panel .book-moves {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+.chess-mh-opening-panel .book-moves span {
+  color: #c090ff;
+  font-weight: 600;
+}
+
+/* Best move info */
+.chess-mh-best-panel {
+  position: fixed;
+  bottom: 60px;
+  left: 20px;
+  background: rgba(25,25,25,0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font: 12px/1.4 'Segoe UI',Arial,sans-serif;
+  z-index: 99999;
+  pointer-events: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  border: 1px solid rgba(0,150,255,0.3);
+}
+.chess-mh-best-panel .label {
+  color: #888;
+  font-size: 11px;
+}
+.chess-mh-best-panel .move {
+  color: #60c0ff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.chess-mh-best-panel .eval {
+  color: #aaa;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+/* Mate panel */
+.chess-mh-mate-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(25,25,25,0.95);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font: 13px/1.5 'Segoe UI',Arial,sans-serif;
+  z-index: 99999;
+  pointer-events: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  border: 1px solid rgba(220,20,20,0.4);
+  min-width: 200px;
+  max-width: 360px;
+}
+.chess-mh-mate-panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #ff6b6b;
+}
+.chess-mh-mate-panel .mate-path {
+  background: rgba(255,255,255,0.06);
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin: 6px 0;
+  font-family: 'Courier New',monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.chess-mh-mate-panel .move-us { color: #ff6b6b; font-weight: 700; }
+.chess-mh-mate-panel .move-them { color: #aaa; }
+.chess-mh-mate-panel .mate-depth {
+  display: inline-block;
+  background: rgba(220,20,20,0.8);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.chess-mh-mate-panel .close-btn {
+  position: absolute;
+  top: 8px; right: 10px;
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+  padding: 2px;
+}
+.chess-mh-mate-panel .close-btn:hover { color: #fff; }
+
+/* Info toast */
+.chess-mh-info {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(30,30,30,0.92);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font: 13px/1.4 'Segoe UI',Arial,sans-serif;
+  z-index: 999999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.chess-mh-info.visible { opacity: 1; }
